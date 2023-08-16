@@ -1,5 +1,3 @@
-
-
 import './App.css';
 import {ItemListContainer} from "./components/ItemListContainer"
 import { NavBar } from './components/NavBar';
@@ -9,17 +7,12 @@ import { NavBar } from './components/NavBar';
 function App (){
 
   return(
-
   <>
-
   <NavBar/>
   <ItemListContainer greeting="Buenos Dias"/>
-
   </>
 );
-    
 }
-
 export default App  ;
 
 
