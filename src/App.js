@@ -1,26 +1,26 @@
 
+
 import './App.css';
-export default App ;
+import {ItemListContainer} from "./components/ItemListContainer"
+import { NavBar } from './components/NavBar';
 
 
-function Person(){
 
-  return (
+function App (){
 
-    <div className ="peson">
-      <h3>Nombre:Pedro</h3>
-      <p>Edad:25</p>
-    </div>
-  );
+  return(
+
+  <>
+
+  <NavBar/>
+  <ItemListContainer greeting="Buenos Dias"/>
+
+  </>
+);
+    
 }
-function App(){
-  return (
-    <div className="App">
-      <h1>hola mundo</h1>
-      <Person/>
-    </div>
 
-  );
-}
+export default App  ;
+
 
 
