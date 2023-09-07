@@ -9,16 +9,17 @@ export const NavBar = () => (
      
  <Navbar bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="#home">Ecommerce</Navbar.Brand>
+        <Navbar.Brand href="/">Ecommerce</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="#home">
-            <span className="green-text">Camisas</span>
+          <Nav.Link href="/categoria/Ropa deportiva">
+          <span className="green-text">Ropa deportiva</span>
+           
           </Nav.Link>
-          <Nav.Link href="#features">
-          <span className="green-text">Pantalones</span>
+          <Nav.Link href="/categoria/Calzado deportivo">
+          <span className="green-text">Calzado deportivo</span>
           </Nav.Link>
-          <Nav.Link href="#pricing">
-            <span className="green-text">Zapatillas</span>
+          <Nav.Link href="/categoria/Ropa casual">
+            <span className="green-text">Ropa casual</span>
           </Nav.Link>
         </Nav>
         <CartWidget />
