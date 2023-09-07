@@ -16,28 +16,24 @@ useEffect(()=>{
     promesa.then((data)=>setProductos(data))
 },[])
 
-console.log(productos)
+
     return     (
         <Container className="mt-5">
             <h1>{props.greeting}</h1>
-            <div>
-                {productos.map(producto =>{
-  return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+            <div style ={{display:"flex", flexWrap:"wrap"}}>
+            {productos.map(producto =>(
+    <Card key={producto.id} style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={producto.foto} style={{height:'10rem'}}/>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>{producto.name}</Card.Title>
         <Card.Text>
-          este producto esta en venta
+          {producto.categoria}
         </Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
-  );
-                })}
+                ))};
             </div>
-
-            
         </Container>
    
     )
