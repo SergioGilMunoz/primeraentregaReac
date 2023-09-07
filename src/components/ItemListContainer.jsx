@@ -1,6 +1,8 @@
 import { useState,useEffect } from "react";
 import { Container } from "react-bootstrap";
-import { ItemCount } from "./ItemCount";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 import data from "../data/productos.json";
 
 console.log(data)
@@ -17,8 +19,25 @@ useEffect(()=>{
 console.log(productos)
     return     (
         <Container className="mt-5">
-            <div>{props.greeting}</div>
-            <ItemCount/>
+            <h1>{props.greeting}</h1>
+            <div>
+                {productos.map(producto =>{
+  return (
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          este producto esta en venta
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+  );
+                })}
+            </div>
+
+            
         </Container>
    
     )
