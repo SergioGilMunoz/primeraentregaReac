@@ -8,3 +8,7 @@ span {
 .green-text{
  color:greenyellow
 }
+.itemCount span{
+  color:black;
+  padding : 1rem;
+}
