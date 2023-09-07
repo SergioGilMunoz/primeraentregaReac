@@ -5,7 +5,7 @@ export const ItemList = ({productos})=> (
 <>
 {productos.map((producto) =>(
     
-  <Items producto={producto}/>
+  <Items key={producto.id} producto={producto}/>
                 ))}
   </>
 )
