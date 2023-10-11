@@ -52,7 +52,7 @@ export const Cart = () => {
     return (
         <Container>
             <h1>Cart</h1>
-            <Table striped bordered over variant="dark">
+            <Table striped bordered over variant="">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -65,7 +65,7 @@ export const Cart = () => {
                 {items.map(item=>(
                     <tr key={item.id}>
                         <td>{item.nombre}</td>
-                        <td>{item.precio}</td>    
+                        <td>{"$" + item.precio}</td>    
                         <td>{item.quantity}</td>    
                         <td>
                         <button onClick={() => removeItem(item.id)}>
@@ -76,10 +76,10 @@ export const Cart = () => {
                 ))}
             </tbody>    
             <tfoot>
-                <tr>Total</tr>
+                <tr id="total-header">Total: </tr>
                 <tr></tr>
                 <tr></tr>
-                <tr>{total()}</tr>
+                <tr strong id="total-value">{"$" + total()}</tr>
                 <tr></tr>
             </tfoot>        
             </Table>
@@ -95,7 +95,7 @@ export const Cart = () => {
                             required
                             />
                         </Form.Group> 
-                        <FormGroup className="mb3"controlId="formBasicEmail">
+                        <FormGroup className="mb-3"controlId="formBasicEmail">
                         <Form.Label>Email</Form.Label>
                         <Form.Control
                             onChange={handleChange}
@@ -105,7 +105,7 @@ export const Cart = () => {
                             required
                             />                  
                         </FormGroup> 
-                        <FormGroup className="mb3"controlId="formBasicEmail">
+                        <FormGroup className="mb-3"controlId="formBasicEmail">
                         <Form.Label>Telefono</Form.Label>
                         <Form.Control
                             onChange={handleChange}

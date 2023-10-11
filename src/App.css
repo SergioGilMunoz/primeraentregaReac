@@ -78,3 +78,13 @@ span {
 .boton-agregar:hover {
   background-color: #45a049;
 }
+
+#total-header {
+  font-size: 24px; /* Tamaño de fuente más grande (ajusta según tus preferencias) */
+  font-weight: bold; /* Texto en negrita */
+}
+
+#total-value {
+  font-size: 20px; /* Tamaño de fuente más grande (ajusta según tus preferencias) */
+  font-weight: bold; /* Texto en negrita */
+}
