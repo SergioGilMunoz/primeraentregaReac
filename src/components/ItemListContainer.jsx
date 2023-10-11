@@ -1,43 +1,47 @@
-
 import { ItemList }  from "./ItemList";
 import { useState,useEffect } from "react";
-import { Container } from "react-bootstrap";
-import data from "../data/productos.json";
+import  {Container}  from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import {getFirestore,getDocs,collection, query,where} from "firebase/firestore";
 
+export const ItemListContainer = props => {
+const [productos,setProductos] = useState([]);
+const [loading,setLoading] = useState(true)
 
-export const ItemListContainer = (props)=>{
-const [productos,setProductos]=useState([]);
+const {id} = useParams();
+console.log(id)
+useEffect(()=> {
+    const db = getFirestore()
+  //  const  refCollection = collection(db,"Productos")
 
-const {id} =useParams();
+  const refCollection = id 
+  ? query(collection(db,"Productos"),where("categoryId","==",id))
+   : collection(db,"Productos")
 
+    getDocs(refCollection)
+    .then(snapshot=> {
+        if (snapshot.size===0) console.log("No hay Resultados")
+        else
+            setProductos(
+        snapshot.docs.map(doc => {
+            return {id: doc.id, ...doc.data()}
+            })
+            )
+        })
+    .finally(() => {
+         setLoading(false)
+        })
+    },[id])
+    
+    if (loading) return <div> Loading...</div>
 
-useEffect(()=>{
-    const promesa =new Promise ((resolve,reject)=>{
-      setTimeout(()=> resolve(data),2000 )  ;
-    });
-    promesa.then((data)=>{
-        if(!id){
-            setProductos(data)
-        }else {
-            const productosFiltrado=data.filter(producto=>producto.categoria ===id);
-            setProductos(productosFiltrado);
-        }
-
-    });
-},[]);
-    return     (
-        <Container className="mt-5">
+    return(
+        <Container className ="mt-4">
             <h1>{props.greeting}</h1>
-            <div style ={{display:"flex", flexWrap:"wrap"}}>
-
-            <ItemList productos={productos}/>
-            
-       
+            <div style={{display: "flex" , flexWrap:"wrap"}}>
+            <ItemList productos={productos}/> 
             </div>
         </Container>
-   
     )
 };
 
-//export default ItemListContainer
