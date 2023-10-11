@@ -23,9 +23,6 @@ export const ItemDetail = ({producto}) => {
           <ItemCount stock={producto.stock} onAdd={onAdd} />
         </div>
       </div>
-      
-
-
 )}
 
 

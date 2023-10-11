@@ -9,6 +9,4 @@ export const CartWidget = () => {
         <Link to="/cart">
                 <img src ={cart} alt="cart"/><span>{totalWidget}</span>
         </Link>
-    
-
 )}

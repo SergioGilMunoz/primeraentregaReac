@@ -12,7 +12,7 @@ const {id} = useParams();
 console.log(id)
 useEffect(()=> {
     const db = getFirestore()
-  //  const  refCollection = collection(db,"Productos")
+ 
 
   const refCollection = id 
   ? query(collection(db,"Productos"),where("categoryId","==",id))
@@ -41,9 +41,7 @@ useEffect(()=> {
         <div style={{display: "flex" , flexWrap:"wrap" }}>
         <ItemList productos={productos}/> 
         </div>
-        </Container>
-
-      
+        </Container> 
     )
 };
 

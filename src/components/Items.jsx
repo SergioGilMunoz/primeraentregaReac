@@ -15,11 +15,8 @@ export const Items = ({producto}) => (
       <Link to={`/item/${producto.id}`} > 
       <Button variant="primary">Comprar</Button>
       </Link> 
-      
     </Card.Body>
   </Card>
-   
-
     )
 
     
