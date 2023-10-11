@@ -37,11 +37,13 @@ useEffect(()=> {
 
     return(
         <Container className ="mt-4">
-            <h1>{props.greeting}</h1>
-            <div style={{display: "flex" , flexWrap:"wrap"}}>
-            <ItemList productos={productos}/> 
-            </div>
+        <h1>{props.greeting}</h1>
+        <div style={{display: "flex" , flexWrap:"wrap" }}>
+        <ItemList productos={productos}/> 
+        </div>
         </Container>
+
+      
     )
 };
 

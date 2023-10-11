@@ -92,7 +92,7 @@ export const Cart = () => {
                             value={formValues.name}
                             type="text"
                             name="name"
-                            requerid
+                            required
                             />
                         </Form.Group> 
                         <FormGroup className="mb3"controlId="formBasicEmail">
@@ -102,7 +102,7 @@ export const Cart = () => {
                             value={formValues.email}
                             type="email"
                             name="email"
-                            requerid
+                            required
                             />                  
                         </FormGroup> 
                         <FormGroup className="mb3"controlId="formBasicEmail">
@@ -112,7 +112,7 @@ export const Cart = () => {
                             value={formValues.phone}
                             type="text"
                             name="phone"
-                            requerid
+                            required
                             />                  
                         </FormGroup> 
                </Form>
