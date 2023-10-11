@@ -1,26 +1,22 @@
+import { NavDropdown } from 'react-bootstrap';
 import { CartWidget } from './CartWidget';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 export const NavBar = () => ( 
     <>
      
- <Navbar bg="dark" data-bs-theme="dark">
+ <Navbar className="bg-primary" data-bs-theme="blue">
       <Container>
         <Navbar.Brand href="/">Ecommerce</Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link href="/categoria/Ropa deportiva">
-          <span className="green-text">Ropa deportiva</span>
-           
-          </Nav.Link>
-          <Nav.Link href="/categoria/Calzado deportivo">
-          <span className="green-text">Calzado deportivo</span>
-          </Nav.Link>
-          <Nav.Link href="/categoria/Ropa casual">
-            <span className="green-text">Ropa casual</span>
-          </Nav.Link>
+        <Nav className="me-auto" >
+
+          <NavDropdown.Item as={Link} to="/categoria/Ropa deportiva" className="me-2">Ropa deportiva</NavDropdown.Item>
+          <NavDropdown.Item  as={Link} to="/categoria/Calzado deportivo" className="me-2">Calzado deportivo</NavDropdown.Item>
+          <NavDropdown.Item  as={Link} to="/categoria/Ropa casual" className="me-2">Ropa casual</NavDropdown.Item>
         </Nav>
         <CartWidget />
       </Container>

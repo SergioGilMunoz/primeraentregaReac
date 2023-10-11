@@ -80,11 +80,15 @@ span {
 }
 
 #total-header {
-  font-size: 24px; /* Tamaño de fuente más grande (ajusta según tus preferencias) */
-  font-weight: bold; /* Texto en negrita */
+  font-size: 24px; 
+  font-weight: bold; 
 }
 
 #total-value {
-  font-size: 20px; /* Tamaño de fuente más grande (ajusta según tus preferencias) */
-  font-weight: bold; /* Texto en negrita */
+  font-size: 20px; 
+  font-weight: bold; 
+}
+
+.verde {
+  color: green; 
 }
