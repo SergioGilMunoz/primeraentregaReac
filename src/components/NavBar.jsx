@@ -14,9 +14,9 @@ export const NavBar = () => (
         <Navbar.Brand href="/">Ecommerce</Navbar.Brand>
         <Nav className="me-auto" >
 
-          <NavDropdown.Item as={Link} to="/categoria/Ropa deportiva" className="me-2">Ropa deportiva</NavDropdown.Item>
-          <NavDropdown.Item  as={Link} to="/categoria/Calzado deportivo" className="me-2">Calzado deportivo</NavDropdown.Item>
-          <NavDropdown.Item  as={Link} to="/categoria/Ropa casual" className="me-2">Ropa casual</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/categoria/Ropa deportiva" className="me-4">Ropa deportiva</NavDropdown.Item>
+          <NavDropdown.Item  as={Link} to="/categoria/Calzado deportivo" className="me-4">Calzado deportivo</NavDropdown.Item>
+          <NavDropdown.Item  as={Link} to="/categoria/Ropa casual" className="me-4">Ropa casual</NavDropdown.Item>
         </Nav>
         <CartWidget />
       </Container>
