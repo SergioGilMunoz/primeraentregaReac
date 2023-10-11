@@ -10,10 +10,11 @@ export const Items = ({producto}) => (
     <Card.Img variant="top" src={producto.imagen} style={{height:"10rem"}}/>
     <Card.Body>  
       <Card.Title>{producto.nombre}</Card.Title>
-      <Card.Text>{"$"+ producto.precio}</Card.Text>
-      <Link to={`/item/${producto.categoryId}`} >
+      <Card.Text>{"Precio : $"+ producto.precio}</Card.Text>
+      <Card.Text>{"Stock : "+ producto.stock}</Card.Text>
+      <Link to={`/item/${producto.id}`} > 
       <Button variant="primary">Comprar</Button>
-      </Link>
+      </Link> *
       
     </Card.Body>
   </Card>

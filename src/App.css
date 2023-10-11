@@ -12,3 +12,69 @@ span {
   color:black;
   padding : 1rem;
 }
+.imagen-con-marco {
+  display: block;
+  border: 2px solid #000; 
+  padding: 10px; 
+  text-align: center; 
+}
+
+.imagen-con-marco img {
+  width: 40%;
+  height: auto;
+}
+.detalle {
+  font-weight: bold; 
+  font-size: 16px; 
+}
+
+.titulo-superior {
+  position: relative ;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 50px; 
+  font-weight: bold; 
+}
+
+.boton-span {
+  font-size: 15px; /* Tamaño de fuente más pequeño para los botones (ajusta según tus preferencias) */
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.boton-span:hover {
+  background-color: #0056b3;
+}
+
+.count-span strong {
+  font-weight: bold; 
+}
+.count-span {
+  font-size: 20px; 
+}
+
+.boton-agregar {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.boton-agregar:hover {
+  background-color: #45a049;
+}

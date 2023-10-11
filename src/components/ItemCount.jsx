@@ -16,10 +16,12 @@ export const ItemCount = ({onAdd,stock} ) =>{
     }
     return(
         <div className="itemCount">
-            <span onClick={Decrementar}>-</span>
-            <span>{count}</span>
-            <span onClick={Incrementar}>+</span>
-            <button onClick={() => onAdd(count)}>Agregar al Carrito</button>
-        </div>
+        <span onClick={Decrementar} className="boton-span">-</span>
+        <span className="count-span">{count}</span>
+        <span onClick={Incrementar} className="boton-span">+</span>
+        <button className="boton-agregar" onClick={() => onAdd(count)}>Agregar al Carrito</button>
+      </div>
+      
     )
 }
+

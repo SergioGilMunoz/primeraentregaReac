@@ -10,12 +10,23 @@ export const ItemDetail = ({producto}) => {
     const onAdd = count => addItem(producto,count)
     
     return (
-<div style ={{display:"flex", flexWrap:"wrap"}}>
-<h1>{producto.nombre}</h1>
-<img alt="" src={producto.imagen} />  
- <div>Stock: {producto.stock}  </div> 
- <div>Precio: {producto.precio} </div>        
-<ItemCount stock={producto.stock} onAdd ={onAdd}/>
-</div>
+        <div style={{ flexDirection: "column" }}>
+        <h1 className="titulo-superior">{producto.nombre}</h1>
+        <div className="imagen-con-marco">
+          <img alt="" src={producto.imagen} />
+        </div>
+        <div>
+          <div className="detalle">Stock: {producto.stock}</div>
+          <div className="detalle">Precio: {producto.precio}</div>
+        </div>
+        <div>
+          <ItemCount stock={producto.stock} onAdd={onAdd} />
+        </div>
+      </div>
+      
+
 
 )}
+
+
+
